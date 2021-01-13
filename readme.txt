@@ -3,51 +3,37 @@ Contributors: PatrickPelayo
 Tags: responsive, iframe,block
 Requires at least: 5.4.2
 Tested up to: 5.6.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A Responsive iframe
+Lets you place Iframes into your posts that will resize dynamically to maintain the same apperance.
 
 == Description ==
-An iframe that will look the same regardless of the width of the page.
+A Responsive Iframe that will resize itself to its parent element.
 
 = Instructions =
-From the block editor under embed select Responsive iframes your website will display by default, with some default settings.
-										
+
+= Install =
+The *plugin manager* is located on the *administration page*. From the *administration page* in the left side bar click *Plugins*. From the top of the page click *add new*.
+
+Install the plugin thru the *plugin manager*, or upload it as a zip file into the *plugin manager*.
+
+= Use =
+
+* **Apply responsive iframe**
+Create a post like you normally would and then click the + icon displayed to *Add block*. Find *Responsive iframes* and click it. 
+By default your current website will be displayed in the iframe.
+
+* **Block Settings**
 Site Address - The url address of the website you want to iframe
-
 Width -  This represents the actual width you want to display from the iframed website.
-
-Height - This represents the actual height you want to display from the iframed website.
-												
+Height - This represents the actual height you want to display from the iframed website.											
 Scrollbar - Displays a scroll bar if the height,and width are smaller than the iframe website.
-
-Border - Dislays a default border around the iframe element.
-							   
-Scale - This will change the max-width percentage of the iframe's parent element, it will allow the element to be scaled by size.
-
-										
-Additional CSS - Any additional CSS will be applied to the iframe's parent element.
-
-= Technical Stuff for Developers =
-> This section provides a technical overview of the plugin.
-
-The plugin was created thru the use of  [Create-Guten-Block](https://github.com/ahmadawais/create-guten-block) package that can be obtained thru NPM.
-
-The source files can be found in the src folder.
-* responsiveIframe.js is the file that makes the iframes responsive from the post page.
-
-
-* constants.js hold the constants that are plugin wide.
-
-
-* block.js registers the block and handles the edit and save functions. 
-Any iframe responsiveness in the block editor is handled by the block.js.
-
-
-* inspector.js solely defines the inspector sidebar, this is used within block.js.
+Border - Dislays a default border around the iframe element.							   
+Scale - This will change the max-width percentage of the iframe's parent element, it will allow the element to be scaled by size.	
+Additional CSS - Any additional CSS will be applied to the iframe's parent element. Use this to provide some additional styling.
 
 == Screenshots ==
 1. Example of New York Times in an iframe.
@@ -56,15 +42,25 @@ Any iframe responsiveness in the block editor is handled by the block.js.
 
 == Changelog ==
 
+= 1.0.1 =
+* updates the readme, and fixes my website link in plugin.php
+
 = 1.0 =
 * first release
 	
 == Upgrade Notice ==
 
+= 1.1 =
+* update optional, only changes readme and fixes my website link in plugin.php
+
 = 1.0 =
 * first release
 	
 == Frequently Asked Questions ==
+
+ = How do I access the block settings =
+ 
+ In the page where you create a post, in the top right corner next to update/publish is a cog wheel that allows you to edit block settings.
 
  = In the editor I can't click on the iframe =
  
