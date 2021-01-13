@@ -4,7 +4,7 @@
  * Plugin URI: 
  * Description: Creates responsive iframe elements
  * Author: PatrickPelayo
- * Author URI: https://www.PatrickP.Tech/
+ * Author URI: http://www.PatrickP.Tech/
  * Version: 1.0.1
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
