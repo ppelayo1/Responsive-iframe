@@ -75,10 +75,9 @@ export default class Inspector extends Component{
     }
 
     render(){
-        let {attributes,setAttributes} = this.props;
-        
+        let {attributes,setAttributes} = this.props; 
         let breakPoints = attributes.breakPoints;
-        console.log(breakPoints);
+        
         return(
             <InspectorControls>
                 <Panel>

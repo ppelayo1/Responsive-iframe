@@ -94,7 +94,7 @@ jQuery(document).ready(function () {
             }else{
                 width = jQuery(selector).data('width-iframe'); 
             }
-            console.log(width);
+            
             return width;
         }
 
