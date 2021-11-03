@@ -3,7 +3,7 @@ Contributors: PatrickPelayo
 Tags: responsive, iframe,block
 Requires at least: 5.4.2
 Tested up to: 5.8.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -41,6 +41,9 @@ Additional CSS - Any additional CSS will be applied to the iframe's parent eleme
 3. The iframe in the website, demonstrating from a desktop viewpoint.
 
 == Changelog ==
+
+= 1.1.1 =
+* Max Width setting now using px instead of REM.
 
 = 1.1.0 =
 * Adds to advanced settings an option to specify max-width of Iframe

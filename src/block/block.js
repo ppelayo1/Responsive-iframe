@@ -248,7 +248,7 @@ registerBlockType( 'patrickp/responsive-iframes', {
         
         //user using advanced settings to specify max-width of iframe
         if(attributes.useMaxWidth){
-            maxWidth = {maxWidth:attributes.maxWidth/16 + "rem"};
+            maxWidth = {maxWidth:attributes.maxWidth + "px"};
         }
         //style for the wrapper
         let style = Object.assign(center,maxWidth);
