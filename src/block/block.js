@@ -80,6 +80,13 @@ registerBlockType( 'patrickp/responsive-iframes', {
         maxWidth:{
             type:'number',
             default:2000
+        },
+        breakPoints:{
+            type:'array',
+            default:[{
+                breakPointW:0,
+                siteW:0
+            }]
         }
     },
 
@@ -245,7 +252,8 @@ registerBlockType( 'patrickp/responsive-iframes', {
         let maxWidth = attributes.wrapperWidth ? {maxWidth:attributes.wrapperWidth + '%'} : {};
         let center = {marginLeft:'auto',marginRight:'auto'};
         let className = attributes.className ? attributes.wrapperClass + ' ' + attributes.className : attributes.wrapperClass;
-        
+        let breakPoints = JSON.stringify(attributes.breakPoints);
+
         //user using advanced settings to specify max-width of iframe
         if(attributes.useMaxWidth){
             maxWidth = {maxWidth:attributes.maxWidth + "px"};
@@ -254,7 +262,7 @@ registerBlockType( 'patrickp/responsive-iframes', {
         let style = Object.assign(center,maxWidth);
         
         //The block holds data attributes for the actual width and height of the iframe
-        let block = <iframe style={border} id={attributes.id} className={RESPONSIVE_IFRAME_CONSTANTS.CLASS_NAME} data-width-iframe={attributes.iFrameWidth} data-height-iframe={attributes.iFrameHeight} scrolling={scrollBar} src={attributes.iFrameURL}></iframe> 
+        let block = <iframe style={border} id={attributes.id} className={RESPONSIVE_IFRAME_CONSTANTS.CLASS_NAME} data-break-points={breakPoints} data-width-iframe={attributes.iFrameWidth} data-height-iframe={attributes.iFrameHeight} scrolling={scrollBar} src={attributes.iFrameURL}></iframe> 
     
 		return (
             <Fragment>

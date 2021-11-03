@@ -1,1 +1,22 @@
-.responsiveIframeWrapper{margin-top:3em;margin-bottom:3em}
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.responsiveIframeWrapper {
+  margin-top: 3em;
+  margin-bottom: 3em; }
+
+.responsiveIframeButton {
+  color: #2271b1;
+  text-decoration: underline; }
+
+.responsiveIframeButtonRed {
+  color: red;
+  text-decoration: underline; }

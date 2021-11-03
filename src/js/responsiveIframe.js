@@ -73,6 +73,30 @@ jQuery(document).ready(function () {
             jQuery(styleID).append(css);
         }
         
+        setWidth(selector){
+            //initialize variables
+            let width;
+            const breakPoints = jQuery(selector).data('break-points');
+    
+            if(breakPoints.length > 0){s
+                let validBreakPoints = breakPoints.filter((bp)=>{return window.innerWidth <= bp.breakPointW});
+                
+                //sort to determine the lowest width valid breakPoint
+                validBreakPoints.sort(function(a, b){return b.breakPointW - a.breakPointW});
+
+                if(validBreakPoints.length > 0){
+                    const activeBreakPoint = validBreakPoints[validBreakPoints.length-1];
+                    const siteW = activeBreakPoint.siteW;
+                    width = siteW;
+                }else{
+                    width = jQuery(selector).data('width-iframe');
+                }
+            }else{
+                width = jQuery(selector).data('width-iframe'); 
+            }
+            console.log(width);
+            return width;
+        }
 
         updateIframe(){
             //initiate variables
@@ -86,11 +110,11 @@ jQuery(document).ready(function () {
                 //initiate variables
                 let marginBottom;
                 let marginRight;
-                
+
                 //create a selector for jQuery, and then grab some attributes from some elements
                 let selector = className.concat(':eq(' +i+ ')');
                 let id = jQuery(selector).attr('id');
-                let width = jQuery(selector).data('width-iframe');                
+                let width = this.setWidth(selector);               
                 let height = jQuery(selector).data('height-iframe'); 
                 let parentWidth = jQuery(selector).parent().width();
                 
