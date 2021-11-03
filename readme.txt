@@ -3,7 +3,7 @@ Contributors: PatrickPelayo
 Tags: responsive, iframe,block
 Requires at least: 5.4.2
 Tested up to: 5.8.1
-Stable tag: 1.1.1
+Stable tag: 1.2.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html

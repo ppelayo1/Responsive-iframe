@@ -78,7 +78,7 @@ jQuery(document).ready(function () {
             let width;
             const breakPoints = jQuery(selector).data('break-points');
     
-            if(breakPoints.length > 0){s
+            if(breakPoints.length > 0){
                 let validBreakPoints = breakPoints.filter((bp)=>{return window.innerWidth <= bp.breakPointW});
                 
                 //sort to determine the lowest width valid breakPoint
