@@ -2,8 +2,8 @@
 Contributors: PatrickPelayo
 Tags: responsive, iframe,block
 Requires at least: 5.4.2
-Tested up to: 5.6.0
-Stable tag: 1.0.1
+Tested up to: 5.8.1
+Stable tag: 1.1.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -42,6 +42,9 @@ Additional CSS - Any additional CSS will be applied to the iframe's parent eleme
 
 == Changelog ==
 
+= 1.1.0 =
+* Adds to advanced settings an option to specify max-width of Iframe
+
 = 1.0.1 =
 * updates the readme, and fixes my website link in plugin.php
 
@@ -50,10 +53,13 @@ Additional CSS - Any additional CSS will be applied to the iframe's parent eleme
 	
 == Upgrade Notice ==
 
-= 1.1 =
-* update optional, only changes readme and fixes my website link in plugin.php
+= 1.1.0
+* optional update
 
-= 1.0 =
+= 1.0.1 =
+* optional update, only changes readme and fixes my website link in plugin.php
+
+= 1.0.0 =
 * first release
 	
 == Frequently Asked Questions ==

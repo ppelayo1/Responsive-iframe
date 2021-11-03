@@ -1,6 +1,7 @@
-const { InspectorControls} = wp.blockEditor;
+const { InspectorControls,InspectorAdvancedControls} = wp.blockEditor;
 const { Component } = wp.element;
 const { Panel,PanelBody, TextControl, CheckboxControl,RangeControl} = wp.components;
+
 
 
 export default class Inspector extends Component{
@@ -48,13 +49,29 @@ export default class Inspector extends Component{
                         </div>
 
                         <RangeControl
-                            label="Scale"
+                            label={!attributes.useMaxWidth ? "Scale" : "Scale (Disabled by Advanced Setting MAX WIDTH)"}
+                            disabled={attributes.useMaxWidth}
                             min={1}
                             max={100}
                             value = {attributes.wrapperWidth}
                             onChange= {(val)=>{setAttributes({wrapperWidth:val});}}
                         />  
                     </PanelBody>
+                    <InspectorAdvancedControls>
+                    <CheckboxControl
+                                label = 'UseMaxWidth(This will disable scaling)'
+                                checked = {attributes.useMaxWidth}
+                                onChange = {()=>{setAttributes({useMaxWidth:!attributes.useMaxWidth});}}
+                            />
+					<RangeControl
+                        disabled={!attributes.useMaxWidth}
+                        label="Max-Width"
+                        min={1}
+                        max={3000}
+                        value = {attributes.maxWidth}
+                        onChange= {(val)=>{setAttributes({maxWidth:val});}}
+                    />  
+				</InspectorAdvancedControls>
                 </Panel>
             </InspectorControls>
         )

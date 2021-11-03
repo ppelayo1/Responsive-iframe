@@ -72,6 +72,14 @@ registerBlockType( 'patrickp/responsive-iframes', {
         wrapperClass:{
             type:'string',
             default:RESPONSIVE_IFRAME_CONSTANTS.WRAPPER_CLASS_NAME //wrapped around the iframe element, includes some basic formating founbd in style.scss
+        },
+        useMaxWidth:{
+            type:'boolean',
+            default:false
+        },
+        maxWidth:{
+            type:'number',
+            default:2000
         }
     },
 
@@ -238,6 +246,10 @@ registerBlockType( 'patrickp/responsive-iframes', {
         let center = {marginLeft:'auto',marginRight:'auto'};
         let className = attributes.className ? attributes.wrapperClass + ' ' + attributes.className : attributes.wrapperClass;
         
+        //user using advanced settings to specify max-width of iframe
+        if(attributes.useMaxWidth){
+            maxWidth = {maxWidth:attributes.maxWidth/16 + "rem"};
+        }
         //style for the wrapper
         let style = Object.assign(center,maxWidth);
         
