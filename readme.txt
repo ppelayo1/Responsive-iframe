@@ -35,12 +35,24 @@ Border - Dislays a default border around the iframe element.
 Scale - This will change the max-width percentage of the iframe's parent element, it will allow the element to be scaled by size.	
 Additional CSS - Any additional CSS will be applied to the iframe's parent element. Use this to provide some additional styling.
 
+* **BreakPoints**
+Available under advanced settings, and will let you specify the width of the site to display depending on the width of the device.
+Multiple breakpoints can be used. The lowest BreakPoint Width will take effect over any higher BreakPoint Widths when the screen device is below or at its BreakPoint Width.
+Example Breakpoint 1 250px, Breakpoint 2 350px. A device with a screen width of 250px will only trigger Breakpoint 1. ScreenWidth 251px, will only trigger BreakPoint 2.
+Name - The name you wish to give the breakpoint
+BreakPoint Width - At and below this width, this breakpoint is triggered.
+Site Width - This is the width of the website to display when the breakpoint is triggered
+
+
 == Screenshots ==
 1. Example of New York Times in an iframe.
 2. The iframe in the website, demonstrating from a mobile viewpoint.
 3. The iframe in the website, demonstrating from a desktop viewpoint.
 
 == Changelog ==
+
+= 1.2.0 =
+* Added to advanced settings the ability to add breakpoints to the iframe.
 
 = 1.1.1 =
 * Max Width setting now using px instead of REM.
@@ -55,6 +67,9 @@ Additional CSS - Any additional CSS will be applied to the iframe's parent eleme
 * first release
 	
 == Upgrade Notice ==
+
+= 1.2.0
+* Good update if you want more control on the iframe apperance for differant devices
 
 = 1.1.0
 * optional update
@@ -74,7 +89,7 @@ Additional CSS - Any additional CSS will be applied to the iframe's parent eleme
  = In the editor I can't click on the iframe =
  
  Click directly underneath the iframe element, you want to select the block so you can edit it. 
- 
+ Top ToolBar on the page also has three horizontal lines that let you select your blocks in the editor.
  = What can I stylize without breaking the iframe =
  
  Leave the iframe element largly alone, focus css on the parent div element. 
